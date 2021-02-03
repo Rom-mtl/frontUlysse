@@ -7,7 +7,7 @@ const axios = require('axios');
 const Admin = () => {
   const [gladiators, setGladiators] = useState([]);
   const { register, handleSubmit, reset } = useForm();
-  const [newGladiators, setNewGladiators] = useState(false);
+  const [newGladiators, setNewGladiators] = useState('');
 
   // const onSubmit = (data) => {
   //   setNewGladiators(data);
@@ -20,17 +20,14 @@ const Admin = () => {
       .then((res) => setGladiators(res.data));
   };
 
-  const createAGladiator = async () => {
-    await axios
-      .post('http://localhost:5000/gladiators', { newGladiators })
-      .then((res) => console.log(res.data));
-  };
+  // const createAGladiator = async () => {
+  //   await axios
+  //     .post('http://localhost:5000/gladiators', { newGladiators })
+  //     .then((res) => console.log(res.data));
+  // };
 
   useEffect(() => {
     getAllGladiators();
-    if (newGladiators) {
-      createAGladiator();
-    }
   }, [newGladiators]);
 
   return (
@@ -62,9 +59,13 @@ const Admin = () => {
         <div>
           <p>Ajouter un Gladiateur</p>
           <form
-            onSubmit={handleSubmit((data) => {
+            onSubmit={handleSubmit(async (data) => {
               setNewGladiators(data);
               reset();
+              console.log(data);
+              await axios.post('http://localhost:5000/gladiators', {
+                data,
+              });
             })}
           >
             <input name="picture" ref={register} placeholder="Url Photo" />
