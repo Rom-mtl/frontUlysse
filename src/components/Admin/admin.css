@@ -1,0 +1,35 @@
+.gladiators-container p {
+  color: black;
+}
+
+.gladiators-container {
+  margin-top: 100px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 12px;
+  width: 50px;
+}
+
+table input {
+  width: 100%;
+}

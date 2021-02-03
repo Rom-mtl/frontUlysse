@@ -19,11 +19,11 @@ const Header = () => {
             DETENTE
           </a>
           <a id="contact" className="menu-item" href="/contact">
-            CHALLENGE
-          </a>
-          <a id="contact" className="menu-item" href="/contact">
             NOUS CONTACTER
           </a>
+          <Link to="/admin" id="contact" className="menu-item">
+            ADMINISTRATION
+          </Link>
         </Menu>
       </div>
     </header>

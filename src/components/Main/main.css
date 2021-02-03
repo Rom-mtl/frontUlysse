@@ -4,13 +4,13 @@
   flex-direction: column;
 }
 
-h1,
+/* h1,
 p {
   text-align: center;
   font-size: large;
   color: white;
   text-align: center;
-}
+} */
 
 .main-background {
   background-image: url('../../assets/grece-ithaque-palais-theorique-ulysse-jc-golvin.jpg');

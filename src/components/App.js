@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Admin from './Admin/admin';
 import './App.css';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/reserver" component={Reserver} />
+          <Route path="/admin" component={Admin} />
         </Switch>
 
         <Footer />
