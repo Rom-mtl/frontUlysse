@@ -1,0 +1,17 @@
+.footerContainer {
+  background-image: url('../../assets/grece-ithaque-palais-theorique-ulysse-jc-golvin.jpg');
+  background-position: bottom;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer {
+  flex-shrink: 0;
+}
+/* 
+@media only screen and (max-width: 400px) {
+  p {
+    font-size: 10px;
+  }
+} */

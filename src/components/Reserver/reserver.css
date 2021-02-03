@@ -1,0 +1,24 @@
+.reserver-main {
+  background-color: yellow;
+  height: 80px;
+}
+
+.reserver-challenge {
+  background-color: lightcoral;
+  height: 80px;
+}
+
+.reserver-hotel {
+  background-color: lightblue;
+  height: 80px;
+}
+
+.reserver-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.reserver-middlebox {
+  display: flex;
+  flex-direction: column;
+}

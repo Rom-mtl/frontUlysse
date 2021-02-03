@@ -1,0 +1,46 @@
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+p {
+  text-align: center;
+  font-size: large;
+  color: white;
+  text-align: center;
+}
+
+.main-background {
+  background-image: url('../../assets/grece-ithaque-palais-theorique-ulysse-jc-golvin.jpg');
+  background-size: cover;
+  height: 300px;
+}
+
+.main-detente {
+  background-color: lightblue;
+  height: 80px;
+}
+
+.main-detente-background {
+  background-image: url('../../assets/ithaque\ grèce\ cover.jpeg');
+  background-size: cover;
+  height: 100px;
+}
+
+.main-challenge {
+  background-color: lightcoral;
+  height: 80px;
+}
+
+.main-challenge-background {
+  background-image: url('../../assets/arène.jfif');
+  background-size: cover;
+  height: 100px;
+}
+
+.main-reserver {
+  background-color: yellow;
+  height: 80px;
+}
