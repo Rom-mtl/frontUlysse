@@ -1,46 +1,101 @@
+main {
+  background-image: url('https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/OceansJames_St._JohnFlickr.jpg?B6OLz3xbs7_r_ttzkutmzDH3TsZyVnyA&itok=0DEsgy0J');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .main-container {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* h1,
-p {
-  text-align: center;
-  font-size: large;
+.main-container p {
   color: white;
   text-align: center;
-} */
+  font-weight: bold;
+}
+
+.main-container h1 {
+  margin-top: 50px;
+  color: white;
+}
 
 .main-background {
-  background-image: url('../../assets/grece-ithaque-palais-theorique-ulysse-jc-golvin.jpg');
-  background-size: cover;
-  height: 300px;
+  height: 800px;
+  background-image: url('../../assets/backgroundSite.png');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-background h1 {
+  margin-bottom: 300px;
 }
 
 .main-detente {
   background-color: lightblue;
-  height: 80px;
+  height: 150px;
+  border-radius: 50%;
+  width: 150px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  margin-right: 250px;
+  border: 2px solid black;
+  box-shadow: 30px 5px 15px lightblue;
 }
 
 .main-detente-background {
   background-image: url('../../assets/ithaque\ grèce\ cover.jpeg');
   background-size: cover;
   height: 100px;
+  border: 2px solid black;
 }
 
 .main-challenge {
   background-color: lightcoral;
-  height: 80px;
+  height: 150px;
+  border-radius: 50%;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-left: 230px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+  box-shadow: -30px 5px 15px lightcoral;
 }
 
 .main-challenge-background {
   background-image: url('../../assets/arène.jfif');
   background-size: cover;
   height: 100px;
+  border: 2px solid black;
 }
 
 .main-reserver {
-  background-color: yellow;
-  height: 80px;
+  background-color: #ecea60;
+  height: 150px;
+  border-radius: 50%;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 50px yellow;
+}
+
+.message {
+  font-size: 20px;
 }

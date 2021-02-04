@@ -1,14 +1,36 @@
-.gladiators-container p {
-  color: black;
+.admin-container {
+  background-image: url('https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/OceansJames_St._JohnFlickr.jpg?B6OLz3xbs7_r_ttzkutmzDH3TsZyVnyA&itok=0DEsgy0J');
+  background-attachment: fixed;
 }
 
-.gladiators-container {
-  margin-top: 100px;
+.gladiators-container p {
+  color: white;
+  text-align: center;
+  /* background-color: rgba(158, 8, 8, 0.945); */
+  margin: 0;
+  padding: 20px;
+}
+
+.gladiators-container h1 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  /* background-color: rgba(158, 8, 8, 0.945); */
+}
+
+.preGladiator-container {
+  height: 350px;
+  background-image: url('../../assets/adminPanel.png');
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 /* Zebra striping */
@@ -25,11 +47,13 @@ th {
 td,
 th {
   border: 1px solid #ccc;
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 table input {
-  width: 100%;
+  width: 90%;
 }

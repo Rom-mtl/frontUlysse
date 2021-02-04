@@ -39,9 +39,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #ece92f;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  background: #ecea60;
+
+  font-size: 1.3em;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -53,6 +53,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #b8b7ad;
   padding: 0.8em;
+}
+
+.bm-item-list a {
+  text-decoration: none;
+  color: rgb(22, 22, 21);
+  padding: 30px;
+  border-bottom: 1px solid white;
+  text-align: center;
 }
 
 /* Individual item */

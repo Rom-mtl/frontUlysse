@@ -2,8 +2,10 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Admin from './Admin/admin';
 import './App.css';
 import Footer from './Footer/Footer';
+import Gladiators from './Gladiators/Gladiators';
 import Header from './Header/Header';
 import Main from './Main/Main';
+
 import Reserver from './Reserver/Reserver';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route path="/reserver" component={Reserver} />
           <Route path="/admin" component={Admin} />
+          <Route path="/gladiators" component={Gladiators} />
         </Switch>
 
         <Footer />
