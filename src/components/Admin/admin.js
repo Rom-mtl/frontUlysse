@@ -20,6 +20,13 @@ const Admin = () => {
       .then((res) => setGladiators(res.data));
   };
 
+  const deletteGladiator = async (e) => {
+    const idToDel = e.target.id;
+    await axios
+      .delete('http://localhost:5000/gladiators', { data: { data: idToDel } })
+      .then((res) => console.log(res.data));
+  };
+
   // const createAGladiator = async () => {
   //   await axios
   //     .post('http://localhost:5000/gladiators', { newGladiators })
@@ -28,7 +35,7 @@ const Admin = () => {
 
   useEffect(() => {
     getAllGladiators();
-  }, [newGladiators]);
+  }, [newGladiators, deletteGladiator]);
 
   return (
     <div className="admin-container">
@@ -37,6 +44,8 @@ const Admin = () => {
         <table>
           <thead>
             <tr>
+              <th>Del</th>
+              <th>Id</th>
               <th>Photo</th>
               <th>Nom</th>
               <th>Arme</th>
@@ -47,49 +56,93 @@ const Admin = () => {
           <tbody>
             {gladiators.map((item) => (
               <tr key={item.id}>
-                <td>{item.picture}</td>
-                <td>{item.name}</td>
-                <td>{item.arme}</td>
-                <td>{item.victories}</td>
-                <td>{item.popularity}</td>
+                <td>
+                  <button id={item.id} onClick={deletteGladiator} type="submit">
+                    X
+                  </button>
+                </td>
+                <td id={item.id}>{item.id}</td>
+                <td id={item.picture}>{item.picture}</td>
+                <td id={item.name}>{item.name}</td>
+                <td id={item.arme}>{item.arme}</td>
+                <td id={item.victories}>{item.victories}</td>
+                <td id={item.popularity}>{item.popularity}</td>
               </tr>
             ))}
           </tbody>
         </table>
+
         <div>
           <p>Ajouter un Gladiateur</p>
+
           <form
             onSubmit={handleSubmit(async (data) => {
-              setNewGladiators(data);
               reset();
               console.log(data);
               await axios.post('http://localhost:5000/gladiators', {
                 data,
               });
+              setNewGladiators(data);
             })}
           >
-            <input name="picture" ref={register} placeholder="Url Photo" />
-            <input
-              required
-              name="name"
-              ref={register}
-              placeholder="Nom/pseudo"
-            />
-            <input required name="arme" ref={register} placeholder="arme" />
-            <input
-              required
-              name="victoires"
-              ref={register}
-              placeholder="victoire(s)"
-            />
-            <select required name="popularity" ref={register}>
-              <option value="">Choisir...</option>
-              <option value="basse">basse</option>
-              <option value="moyenne">moyenne</option>
-              <option value="haute">haute</option>
-            </select>
+            <table>
+              <thead>
+                <tr>
+                  <th>Photo</th>
+                  <th>Nom</th>
+                  <th>Arme</th>
+                  <th>Victoires</th>
+                  <th>Popularité</th>
+                </tr>
+              </thead>
 
-            <input type="submit" />
+              <tbody>
+                <tr>
+                  <td>
+                    <input
+                      name="picture"
+                      ref={register}
+                      placeholder="Url Photo"
+                    />{' '}
+                  </td>
+                  <td>
+                    <input
+                      required
+                      name="name"
+                      ref={register}
+                      placeholder="Nom/pseudo"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      required
+                      name="arme"
+                      ref={register}
+                      placeholder="arme"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      required
+                      name="victoires"
+                      ref={register}
+                      placeholder="victoire(s)"
+                    />
+                  </td>
+                  <td>
+                    <select required name="popularity" ref={register}>
+                      <option value="">Choisir...</option>
+                      <option value="basse">basse</option>
+                      <option value="moyenne">moyenne</option>
+                      <option value="haute">haute</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="submit" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </form>
         </div>
       </div>
