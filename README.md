@@ -27,7 +27,7 @@ You can find the figma makets in Ressources folder: UlysseFrames.pdf
 
 ## Database Schema
 
-Work in Progress
+![Figma's screens](https://i.ibb.co/fVJkNyT/capture-Db.png)
 
 ## Technologies
 
