@@ -23,6 +23,7 @@ This project is realized as part of my training in wild code shcool. I have 2 da
 ## Figma Makets
 
 You can find the figma makets in Ressources folder: UlysseFrames.pdf
+![Figma's screens](https://i.ibb.co/v4BW8Vt/Capture-Test.png)
 
 ## Database Schema
 
